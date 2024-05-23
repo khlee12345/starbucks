@@ -1,20 +1,3 @@
-const saerchEl = document.querySelector('.search');
-const saerchInputEl = saerchEl.querySelector('input');
-
-saerchEl.addEventListener('click', function () {
-  saerchInputEl.focus();
-});
-
-saerchInputEl.addEventListener('focus', function () {
-  saerchEl.classList.add('focused');
-  saerchInputEl.setAttribute('placeholder','통합검색');
-});
-
-saerchInputEl.addEventListener('blur', function () {
-    saerchEl.classList.remove('focused');
-    saerchInputEl.setAttribute('placeholder','');
-});
-
 const badgeEl = document.querySelector('header .badges');
 const toTopEl = document.querySelector('#to-top');
 
@@ -133,6 +116,3 @@ spyEls.forEach( function(spyEl) {
         .setClassToggle(spyEl, 'show')
         .addTo(new ScrollMagic.Controller());
 });
-
-const thisYear = document.querySelector('.this-year');
-thisYear.textContent = new Date().getFullYear();
